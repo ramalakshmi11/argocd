@@ -5,11 +5,19 @@ metadata:
   name: mydeploy
 spec:
   replicas: 2
-  containers:
-    - name: cont1
-      image: shaikmustafa/dm
-      ports:
-        - containerPort: 80
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+     spec:
+       containers:
+         - name: cont1
+           image: shaikmustafa/dm
+           ports:
+             - containerPort: 80
       
   
 ---
