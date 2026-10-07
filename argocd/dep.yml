@@ -12,7 +12,7 @@ spec:
     metadata:
       labels:
         app: web
-     spec:
+    spec:
        containers:
          - name: cont1
            image: shaikmustafa/dm
